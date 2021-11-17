@@ -7,7 +7,7 @@
 
 // Disable login (don't ask for credentials, be careful)
 // Example: $NO_LOGIN = true;
-$NO_LOGIN = false;
+$NO_LOGIN = true;
 
 // Single-user credentials
 // Example: $USER = 'user'; $PASSWORD = 'password';
@@ -533,7 +533,7 @@ $HOME_DIRECTORY = '';
 ?>
 <?php
 // Initializing
-if (!isset($NO_LOGIN)) $NO_LOGIN = false;
+if (!isset($NO_LOGIN)) $NO_LOGIN = true;
 if (!isset($ACCOUNTS)) $ACCOUNTS = array();
 if (isset($USER) && isset($PASSWORD) && $USER && $PASSWORD) $ACCOUNTS[$USER] = $PASSWORD;
 if (!isset($PASSWORD_HASH_ALGORITHM)) $PASSWORD_HASH_ALGORITHM = '';
@@ -812,7 +812,7 @@ else if (!$IS_CONFIGURED) {
                 <li>At the beginning of the file enter your <span class="variable">$USER</span> and <span class="variable">$PASSWORD</span> credentials, edit any other settings that you like (see description in the comments).</li>
                 <li>Upload changed file to the web server and open it in the browser.</li>
             </ul>
-            <p>For more information visit Web Console website: <a href="http://web-console.org">http://web-console.org</a></p>
+            
         </div>
     </body>
 </html>
